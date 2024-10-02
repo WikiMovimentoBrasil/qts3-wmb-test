@@ -2,22 +2,22 @@
 
 {% block content %}
 
-<h2 class="pico-contrast">Batch Details: {{ batch.name }}</h2>
+<h2>Batch Details: {{ batch.name }}</h2>
 
-<section class="pico-container">
+<section>
     <p><strong>Batch ID:</strong> {{ batch.pk }}</p>
     <p><strong>User:</strong> {{ batch.user }}</p>
     <p><strong>Status:</strong> 
         {% if batch.status == batch.STATUS_STOPPED %}
-            <span class="pico-background-red-600">Stopped</span>
+            Stopped
         {% elif batch.status == batch.STATUS_BLOCKED %}
-            <span class="pico-background-yellow-600">Blocked</span>
+            Blocked
         {% elif batch.status == batch.STATUS_INITIAL %}
-            <span class="pico-background-gray-600">Initial</span>
+            Initial
         {% elif batch.status == batch.STATUS_RUNNING %}
-            <span class="pico-background-blue-600">Running</span>
+            Running
         {% elif batch.status == batch.STATUS_DONE %}
-            <span class="pico-background-green-600">Done</span>
+            Done
         {% endif %}
     </p>
     <p><strong>Created:</strong> {{ batch.created }}</p>
@@ -25,8 +25,8 @@
     <p><strong>Message:</strong> {{ batch.message|default:"No message available" }}</p>
 </section>
 
-<h3 class="pico-contrast">Commands</h3>
-<section class="pico-container">
+<h3>Commands</h3>
+<section>
     {% if batch.commands %}
         <ul>
         {% for command in batch.commands %}
