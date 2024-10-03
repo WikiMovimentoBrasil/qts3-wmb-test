@@ -1,13 +1,11 @@
-import os
-
 from datetime import datetime
 
 from django.shortcuts import render
+from django.shortcuts import redirect
 from django.urls import reverse
 from django.views.decorators.http import require_http_methods
 
 from core.models import Batch
-from core.models import BatchCommand
 from core.parsers.base import ParserException
 from core.parsers.v1 import V1CommandParser
 from core.parsers.csv import CSVCommandParser
