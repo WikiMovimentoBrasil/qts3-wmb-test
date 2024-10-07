@@ -29,7 +29,9 @@ To generate a good secret key you can run with python 3.6+
 python -c "import secrets; print(secrets.token_urlsafe())"
 ```
 
-If you are running this container for the first time, you have to initialize the database and create a superuser for the Django ADMIN
+If you are running this container for the first time, you have to initialize the database and create a superuser for the Django admin.
+
+Run these after `make shell`:
 
 ```bash
 > cd src
@@ -37,13 +39,16 @@ If you are running this container for the first time, you have to initialize the
 > python manage.py createsuperuser
 ```
 
+If you're having troubles with file/folder/database permissions, run `sudo chmod 777 src/` to allow any user to read, write and enter the folder, and then try again.
+
 Now that everything is set up, we can start **Quickstatements**. We have 2 ways of doing that:
 
 * from inside the container, running 
 ```bash 
 >./cmd_run.sh
 ```
-* from our Makefile, running 
+
+* Or, from our Makefile, running
 ```bash 
 > make run
 ```
