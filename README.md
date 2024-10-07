@@ -31,7 +31,7 @@ python -c "import secrets; print(secrets.token_urlsafe())"
 
 If you are running this container for the first time, you have to initialize the database and create a superuser for the Django admin.
 
-Run these after `make shell`:
+Run these after `make build` and `make shell`:
 
 ```bash
 > cd src
