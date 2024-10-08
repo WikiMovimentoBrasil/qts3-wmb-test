@@ -1,5 +1,4 @@
 
-DJANGO_SECRET_KEY=PV-6h-bwR5b0H2l5pDRdAld5JSPU3cu9wpKgtykb8jE
+DJANGO_SECRET_KEY='django-insecure-hs5+wt*ij_qn05_jnjhd)yiu9i_ks@*s))99a)8g(@bw$w0g!n'
 
 DJANGO_STATIC_ROOT=/home/wmb/www/static
-
