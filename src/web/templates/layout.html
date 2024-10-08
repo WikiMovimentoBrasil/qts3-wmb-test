@@ -21,6 +21,23 @@
       height: 32px;
     }
 
+    /* Override button styles */
+    button,
+    a[role="button"],
+    input[type="submit"] {
+      background-color: blue !important; /* Change the button color to blue */
+      color: white !important;           /* Change text color for contrast */
+      border-color: blue !important;     /* Ensure border matches the new button color */
+    }
+
+    /* Change hover state */
+    button:hover,
+    a[role="button"]:hover,
+    input[type="submit"]:hover {
+      background-color: darkblue !important; /* Darken button on hover */
+      border-color: darkblue !important;     /* Darken border on hover */
+    }
+
     {% block css %}
     {% endblock %}
     
