@@ -21,6 +21,17 @@
       height: 32px;
     }
 
+    :root {
+    --primary: blue; 
+  }
+  
+  button,
+  input[type="submit"],
+  a[role="button"] {
+    background-color: var(--primary);
+    color: white; 
+  }
+
     {% block css %}
     {% endblock %}
     
